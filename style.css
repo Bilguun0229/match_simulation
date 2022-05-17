@@ -1,0 +1,24 @@
+/* толгой хэсэг */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.header {
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    gap: 10px;
+}
+
+.active {
+    background-color: red;
+}
