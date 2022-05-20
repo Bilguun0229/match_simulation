@@ -6,7 +6,8 @@ const date = new Date();
 let y = date.getFullYear();
 let m = date.getMonth() + 1;
 let d = date.getDate();
-dates = document.querySelectorAll(".box>div:nth-child(1)")
+dates = document.querySelectorAll(".box>div:nth-child(1)");
+
 setInterval(function() {
     for (let i = 0; i < dates.length; i++) {
         d += 2;
@@ -25,13 +26,20 @@ setInterval(function() {
     document.querySelector(".date").innerHTML = y + "/" + m + "/" + d
     scores = document.querySelectorAll(".team_list>div:nth-child(1)");
     names = document.querySelectorAll(".team_list>div:nth-child(2)");
-
+    headerDate = document.querySelector(".date").innerHTML
     randomCount = Math.floor(Math.random() * 7);
 
     for (let i = 0; i < scores.length; i++) {
         scores[i].innerHTML = Math.floor(Math.random() * 7);
     }
     // sariig hartsuulax
+    console.log(headerDate);
+    console.log(document.querySelector(".date").innerHTML);
+    if (headerDate == document.querySelector(".date").innerHTML) {
+        dateArray = Number(headerDate.split("/"));
+        dateArray[2] += 2;
+        console.log(dateArray)
+    }
 
 }, 1000);
 // Товчлуур дарах үед ажиллах 
