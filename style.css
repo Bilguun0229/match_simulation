@@ -5,20 +5,129 @@
     padding: 0;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(picture/white.png);
+}
+
 .container {
+    width: 90%;
     display: grid;
+    margin: auto;
     grid-template-columns: repeat(4, 25%);
+}
+
+.img {
+    width: 30px;
+    height: 30px;
 }
 
 .header {
     text-align: center;
 }
 
+.header>img {
+    width: 200px;
+}
+
 .box {
+    width: 250px;
     display: flex;
+    margin: auto;
     gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 10px;
 }
 
 .active {
-    background-color: red;
+    background-color: hsl(212, 18%, 16%);
+    color: #fff;
+    border-radius: 20px;
+}
+
+.date {
+    width: 80px;
+}
+
+.name {
+    width: 45px;
+    text-align: center;
+    padding: 5px;
+}
+
+.score {
+    width: 30px;
+    text-align: center;
+    padding: 5px;
+}
+
+.winner .score {
+    background-color: hsl(342, 71%, 49%);
+    color: hsl(0, 0%, 100%);
+}
+
+.looser .score {
+    background-color: hsl(217, 12%, 63%);
+    color: hsl(0, 0%, 100%);
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+}
+
+.team1,
+.team2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h3 {
+    color: hsl(217, 12%, 63%);
+    text-align: center;
+}
+
+
+/* button */
+
+.btn {
+    padding: 10px;
+    border-radius: 20px;
+    align-items: center;
+    text-align: center;
+    border: none;
+    background-color: hsl(212, 18%, 16%);
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.container1 {
+    width: 200px;
+    background-color: hsl(213, 19%, 18%);
+    padding: 20px;
+    border-radius: 20px;
+    color: #fff;
+}
+
+#medals {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.semifinals .box {
+    margin-top: 100px;
+}
+
+.gold .box {
+    margin-top: 200px;
+}
+
+.bronze .box {
+    margin-top: 200px;
 }
